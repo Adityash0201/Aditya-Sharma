@@ -643,7 +643,7 @@
     <div class="contact-links reveal">
       <a href="mailto:adityash0201@gmail.com" class="contact-btn">📧 Email Me</a>
       <a href="tel:+918826353131" class="contact-btn">📞 +91-8826353131</a>
-      <a href="Aditya_Sharma_Resume.docx" download="Aditya_Sharma_Resume.docx" class="contact-btn resume-btn">📄 Download Resume</a>
+      <a id="contact-resume-link" href="#" download="Aditya_Sharma_Resume.pdf" class="contact-btn resume-btn">📄 Download Resume</a>
     </div>
   </div>
 </section>
@@ -777,6 +777,8 @@ function closeCert() {
   document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => { if(e.key==='Escape') closeCert(); })
+
+document.getElementById('contact-resume-link').href = document.getElementById('resume-pdf-link').href;
 
 function openResumeNewTab() {
   const dataUrl = document.getElementById('resume-pdf-link').href;
